@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="selectImageView" customModule="PMWDriver" customModuleProvider="target">
+            <connections>
+                <outlet property="selectedImage" destination="37H-9k-hT3" id="JDA-Pi-6tm"/>
+                <outlet property="textImageName" destination="rvs-QI-kdK" id="6lj-B4-4dR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAP-Qd-2oD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonDismissAlert:" destination="-1" eventType="touchUpInside" id="Zsf-YY-6uk"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1u-HD-cvp">
+                    <rect key="frame" x="27.666666666666657" y="215.66666666666663" width="320" height="280"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOA-VL-jTx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEE-Ab-tbu">
+                                    <rect key="frame" x="104.99999999999997" y="17" width="109.66666666666666" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="x1q-ql-dOa">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                        </constraint>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.98039215690000003" green="0.72941176470000002" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="LEE-Ab-tbu" firstAttribute="centerY" secondItem="OOA-VL-jTx" secondAttribute="centerY" id="LJd-iw-qDG"/>
+                                <constraint firstItem="LEE-Ab-tbu" firstAttribute="centerX" secondItem="OOA-VL-jTx" secondAttribute="centerX" id="N4g-k5-jhf"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-Ac-MdZ">
+                            <rect key="frame" x="0.0" y="230.00000000000003" width="320" height="49.999999999999972"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEM-6F-fl7">
+                                    <rect key="frame" x="0.0" y="0.0" width="159" height="50"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.72941176470000002" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                    </variation>
+                                    <connections>
+                                        <action selector="buttonClickCancel:" destination="-1" eventType="touchUpInside" id="Haq-3s-wN3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ka7-6J-cI3">
+                                    <rect key="frame" x="161" y="0.0" width="159" height="50"/>
+                                    <color key="backgroundColor" red="0.23791965840000001" green="0.68518549200000001" blue="0.66631287340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <state key="normal" title="Done">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                    </variation>
+                                    <connections>
+                                        <action selector="buttonClickDone:" destination="-1" eventType="touchUpInside" id="Px1-tk-tpO"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="1mh-oG-zxE">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                </constraint>
+                            </constraints>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddMore" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37H-9k-hT3" customClass="ImageViewX" customModule="PMWDriver" customModuleProvider="target">
+                            <rect key="frame" x="112" y="76.000000000000028" width="96" height="96"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="96" id="4To-Mh-Bwl">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                </constraint>
+                                <constraint firstAttribute="width" constant="96" id="hYQ-4C-FGD">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                </constraint>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLV-cY-V8e">
+                            <rect key="frame" x="112" y="76.000000000000028" width="96" height="96"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="96" id="0xn-bV-vMT">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="96" id="rYg-1J-3oP">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                                </constraint>
+                            </constraints>
+                            <connections>
+                                <action selector="buttonSelectImage:" destination="-1" eventType="touchUpInside" id="9jx-BN-Nb8"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvs-QI-kdK" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <rect key="frame" x="8" y="183.00000000000003" width="304" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="0rs-Jh-7Vu">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                    <color key="value" red="0.98039215690000003" green="0.72941176470000002" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                    <color key="value" red="0.97813743350000004" green="0.76282912489999999" blue="0.258007288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Select image name"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            </variation>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="rvs-QI-kdK" firstAttribute="leading" secondItem="q1u-HD-cvp" secondAttribute="leading" constant="8" id="0CT-Ao-4ct"/>
+                        <constraint firstAttribute="trailing" secondItem="rOE-Ac-MdZ" secondAttribute="trailing" id="1OQ-2O-9GD"/>
+                        <constraint firstAttribute="width" secondItem="q1u-HD-cvp" secondAttribute="height" multiplier="320:280" id="6nY-AF-7qv">
+                            <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
+                        </constraint>
+                        <constraint firstItem="37H-9k-hT3" firstAttribute="centerX" secondItem="q1u-HD-cvp" secondAttribute="centerX" id="8AC-WZ-xex"/>
+                        <constraint firstAttribute="trailing" secondItem="OOA-VL-jTx" secondAttribute="trailing" id="AAq-Yt-n3e"/>
+                        <constraint firstItem="RLV-cY-V8e" firstAttribute="centerY" secondItem="q1u-HD-cvp" secondAttribute="centerY" constant="-16" id="Cjb-YK-1nh"/>
+                        <constraint firstItem="OOA-VL-jTx" firstAttribute="height" secondItem="q1u-HD-cvp" secondAttribute="height" multiplier="60/300" id="HRH-1n-tAP"/>
+                        <constraint firstItem="RLV-cY-V8e" firstAttribute="centerX" secondItem="q1u-HD-cvp" secondAttribute="centerX" id="LKE-Wh-rLE"/>
+                        <constraint firstAttribute="bottom" secondItem="rOE-Ac-MdZ" secondAttribute="bottom" id="Sac-p6-c86"/>
+                        <constraint firstItem="OOA-VL-jTx" firstAttribute="top" secondItem="q1u-HD-cvp" secondAttribute="top" id="eK7-fJ-0l0"/>
+                        <constraint firstAttribute="trailing" secondItem="rvs-QI-kdK" secondAttribute="trailing" constant="8" id="f0y-Pk-y8N"/>
+                        <constraint firstItem="OOA-VL-jTx" firstAttribute="leading" secondItem="q1u-HD-cvp" secondAttribute="leading" id="fUT-2X-0N1"/>
+                        <constraint firstItem="rOE-Ac-MdZ" firstAttribute="top" secondItem="rvs-QI-kdK" secondAttribute="bottom" constant="12" id="gld-Ty-r2h"/>
+                        <constraint firstItem="rOE-Ac-MdZ" firstAttribute="leading" secondItem="q1u-HD-cvp" secondAttribute="leading" id="mWn-bG-7Y8"/>
+                        <constraint firstItem="37H-9k-hT3" firstAttribute="centerY" secondItem="q1u-HD-cvp" secondAttribute="centerY" constant="-16" id="qHD-MV-AJb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.61793664383561642" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="q1u-HD-cvp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="320/375" id="7FT-gQ-01X"/>
+                <constraint firstItem="aAP-Qd-2oD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7Hu-6s-nu0"/>
+                <constraint firstItem="q1u-HD-cvp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="BIW-gW-SGN"/>
+                <constraint firstItem="q1u-HD-cvp" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="brD-Hi-Ptm"/>
+                <constraint firstAttribute="bottom" secondItem="aAP-Qd-2oD" secondAttribute="bottom" id="j5x-FY-3Hh"/>
+                <constraint firstAttribute="trailing" secondItem="aAP-Qd-2oD" secondAttribute="trailing" id="nOh-nV-tcX"/>
+                <constraint firstItem="aAP-Qd-2oD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yyI-mZ-kl1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-82.400000000000006" y="-198.35082458770617"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AddMore" width="99.333335876464844" height="99.333335876464844"/>
+    </resources>
+</document>
